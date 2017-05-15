@@ -57,4 +57,47 @@ import java.util.List;
  *       Bonjour, je m'appelle Jean Dupont
  */
 public class Personne {
+	private final String prenom;
+	private final String nom;
+	private int age;
+	
+	public String getNom() {
+	    return nom;
+	 }
+
+	public String getPrenom() {
+	return prenom;
+	}
+
+	public int getAge() {
+	    return age;
+	 }
+	 public void setAge( int newAge) {
+	      age = newAge;
+	   }
+	 
+	// constructeur continent les nom et prénom et age
+		public Personne(String nom, String prenom, Integer age) {
+			this.nom=nom;
+			this.prenom=prenom;
+			this.age=age;
+		}
+	// constructeur contenant les nom et prénom 
+		public Personne(String nom, String prenom) {
+			this.nom=nom;
+			this.prenom=prenom;
+			setAge(-1);
+		}
+		
+		public String  direBonjour() {
+			String message=" ";
+			message="Bonjour, je m'appelle : "; 
+			return (message);  
+		}
+		public static void main(String[] args)  {
+			 Personne moi = new Personne("Abdel","Nemmiche",51);
+		     System.out.println(message+getNom(moi)+" "+getPrenom(moi));         
+		
+		}
+		
 }
